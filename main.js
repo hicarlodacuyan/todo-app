@@ -146,7 +146,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst Input = () => {\r\n    const inputGroup = document.createElement('div');\r\n    const inputGroupText = document.createElement('div');\r\n    const formControl = document.createElement('input');\r\n    const addToDoBtn = document.createElement('i');\r\n\r\n    inputGroup.classList.add('input-group');\r\n    inputGroupText.classList.add('input-group-text');\r\n    formControl.classList.add('form-control');\r\n    addToDoBtn.classList.add('bi', 'bi-plus-circle');\r\n\r\n    formControl.type = 'text';\r\n    formControl.ariaLabel = 'Text input with radio button';\r\n\r\n    inputGroupText.appendChild(addToDoBtn);\r\n    inputGroup.appendChild(inputGroupText);\r\n    inputGroup.appendChild(formControl);\r\n\r\n    return inputGroup;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Input);\n\n//# sourceURL=webpack://todo_app/./src/components/Input.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst Input = () => {\r\n    const inputGroup = document.createElement('div');\r\n    const inputGroupText = document.createElement('div');\r\n    const formControl = document.createElement('input');\r\n    const addToDoBtn = document.createElement('button');\r\n\r\n    inputGroup.classList.add('input-group');\r\n    inputGroupText.classList.add('input-group-text');\r\n    formControl.classList.add('form-control');\r\n    addToDoBtn.classList.add('bi', 'bi-plus-circle');\r\n\r\n    addToDoBtn.textContent = 'Add ToDo';\r\n    formControl.type = 'text';\r\n    formControl.ariaLabel = 'Text input with radio button';\r\n\r\n    inputGroupText.appendChild(addToDoBtn);\r\n    inputGroup.appendChild(inputGroupText);\r\n    inputGroup.appendChild(formControl);\r\n\r\n    return inputGroup;s\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Input);\n\n//# sourceURL=webpack://todo_app/./src/components/Input.js?");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var bootstrap_icons_font_bootstrap_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-icons/font/bootstrap-icons.css */ \"./node_modules/bootstrap-icons/font/bootstrap-icons.css\");\n/* harmony import */ var _utils_Projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/Projects */ \"./src/utils/Projects.js\");\n/* harmony import */ var _components_Input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Input */ \"./src/components/Input.js\");\n\r\n\r\n\r\n\r\n\r\nconst component = () => {\r\n    return (0,_components_Input__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n};\r\n\r\ndocument.getElementById('content').appendChild(component());\n\n//# sourceURL=webpack://todo_app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var bootstrap_icons_font_bootstrap_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-icons/font/bootstrap-icons.css */ \"./node_modules/bootstrap-icons/font/bootstrap-icons.css\");\n/* harmony import */ var _utils_Projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/Projects */ \"./src/utils/Projects.js\");\n/* harmony import */ var _utils_render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/render */ \"./src/utils/render.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst logicFlow = () => {\r\n    const container = document.getElementById('content');\r\n    container.appendChild((0,_utils_render__WEBPACK_IMPORTED_MODULE_3__[\"default\"])().Input());\r\n\r\n    const addTodoBtn = document.querySelector('.bi-plus-circle');\r\n    const formInput = document.querySelector('.form-control');\r\n    const myPersonalTasks = new _utils_Projects__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\r\n\r\n    addTodoBtn.addEventListener('click', () => {\r\n        myPersonalTasks.add(formInput.value);\r\n        console.log(myPersonalTasks.get());\r\n    });\r\n};\r\n\r\n\r\nlogicFlow();\n\n//# sourceURL=webpack://todo_app/./src/index.js?");
 
 /***/ }),
 
@@ -167,6 +167,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Project)\n/* harmony export */ });\nclass Project {\r\n    constructor() {\r\n        this.todos = [];\r\n    }\r\n\r\n    get() {\r\n        return this.todos;\r\n    }\r\n\r\n    add(item) {\r\n        this.todos.push({\r\n            item,\r\n            currStatus: 'active' \r\n        });\r\n    }\r\n\r\n    delete(item) {\r\n        this.todos.splice(item, 1);\r\n    }\r\n\r\n    clearCompleted() {\r\n        this.todos = this.todos.filter(item => item.currStatus !== 'completed');\r\n    }\r\n\r\n    changeStatus(item) {\r\n        this.todos[item].currStatus === 'active' ? this.todos[item].currStatus = 'completed' : this.todos[item].currStatus = 'active';\r\n    }\r\n\r\n    getStatus(item) {\r\n        return this.todos[item].currStatus;\r\n    }\r\n}\n\n//# sourceURL=webpack://todo_app/./src/utils/Projects.js?");
+
+/***/ }),
+
+/***/ "./src/utils/render.js":
+/*!*****************************!*\
+  !*** ./src/utils/render.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_Input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Input */ \"./src/components/Input.js\");\n\r\n\r\nconst render = () => {\r\n    (0,_components_Input__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n    return { Input: _components_Input__WEBPACK_IMPORTED_MODULE_0__[\"default\"] };\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (render);\n\n//# sourceURL=webpack://todo_app/./src/utils/render.js?");
 
 /***/ }),
 
@@ -336,7 +346,7 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
   \********************************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"f2539a501be3a673de05.woff2?08efbba7c53d8c5413793eecb19b20bb\";\n\n//# sourceURL=webpack://todo_app/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2?");
+eval("module.exports = __webpack_require__.p + \"c8f5aee4e5a2e57edd5c.woff2?08efbba7c53d8c5413793eecb19b20bb\";\n\n//# sourceURL=webpack://todo_app/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2?");
 
 /***/ }),
 
@@ -346,7 +356,7 @@ eval("module.exports = __webpack_require__.p + \"f2539a501be3a673de05.woff2?08ef
   \*******************************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"7ff3ca6fa798de3f8ac2.woff?08efbba7c53d8c5413793eecb19b20bb\";\n\n//# sourceURL=webpack://todo_app/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff?");
+eval("module.exports = __webpack_require__.p + \"f10df7736e3667404d26.woff?08efbba7c53d8c5413793eecb19b20bb\";\n\n//# sourceURL=webpack://todo_app/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff?");
 
 /***/ })
 
