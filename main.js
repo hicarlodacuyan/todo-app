@@ -130,23 +130,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/components/appendTodo.js":
-/*!**************************************!*\
-  !*** ./src/components/appendTodo.js ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst appendTodo = (todos, list) => {\r\n    todos.forEach(todo => {\r\n        let li = document.createElement('li');\r\n        li.innerText = todo.item;\r\n\r\n        list.appendChild(li);\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (appendTodo);\n\n//# sourceURL=webpack://todo_app/./src/components/appendTodo.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _utils_Projects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/Projects */ \"./src/utils/Projects.js\");\n/* harmony import */ var _utils_render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/render */ \"./src/utils/render.js\");\n/* harmony import */ var _components_appendTodo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/appendTodo */ \"./src/components/appendTodo.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst init = () => {\r\n    const container = document.getElementById('content');\r\n    const toDoList = document.createElement('ul');\r\n    container.appendChild((0,_utils_render__WEBPACK_IMPORTED_MODULE_2__[\"default\"])().Input());\r\n    container.appendChild(toDoList);\r\n\r\n    const addTodoBtn = document.querySelector('.bi-plus-circle');\r\n    const formInput = document.querySelector('.form-control');\r\n    const myPersonalTasks = new _utils_Projects__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n\r\n    addTodoBtn.addEventListener('click', () => {\r\n        toDoList.innerHTML = '';\r\n        myPersonalTasks.add(formInput.value);\r\n        (0,_components_appendTodo__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(myPersonalTasks.get(), toDoList);\r\n    });\r\n};\r\n\r\n\r\ninit();\n\n//# sourceURL=webpack://todo_app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _utils_Projects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/Projects */ \"./src/utils/Projects.js\");\n/* harmony import */ var _utils_render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/render */ \"./src/utils/render.js\");\n/* harmony import */ var _utils_appendTodo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/appendTodo */ \"./src/utils/appendTodo.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst init = () => {\r\n    const container = document.getElementById('content');\r\n    const toDoList = document.createElement('ul');\r\n    container.appendChild((0,_utils_render__WEBPACK_IMPORTED_MODULE_2__[\"default\"])().Input());\r\n    container.appendChild(toDoList);\r\n\r\n    const addTodoBtn = document.querySelector('.bi-plus-circle');\r\n    const formInput = document.querySelector('.form-control');\r\n    const myPersonalTasks = new _utils_Projects__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n\r\n    addTodoBtn.addEventListener('click', () => {\r\n        toDoList.innerHTML = '';\r\n        myPersonalTasks.add(formInput.value);\r\n        (0,_utils_appendTodo__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(myPersonalTasks.get(), toDoList);\r\n        formInput.value = '';\r\n    });\r\n};\r\n\r\n\r\ninit();\n\n//# sourceURL=webpack://todo_app/./src/index.js?");
 
 /***/ }),
 
@@ -157,6 +147,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Project)\n/* harmony export */ });\nclass Project {\r\n    constructor() {\r\n        this.todos = [];\r\n    }\r\n\r\n    get() {\r\n        return this.todos;\r\n    }\r\n\r\n    add(item) {\r\n        if (item === '') return;\r\n        if (this.todoExists(this.todos, item) === true) return; \r\n\r\n        this.todos.push({\r\n            item,\r\n            currStatus: 'active' \r\n        });\r\n    }\r\n\r\n    delete(item) {\r\n        this.todos.splice(item, 1);\r\n    }\r\n\r\n    clearCompleted() {\r\n        this.todos = this.todos.filter(item => item.currStatus !== 'completed');\r\n    }\r\n\r\n    changeStatus(item) {\r\n        this.todos[item].currStatus === 'active' ? this.todos[item].currStatus = 'completed' : this.todos[item].currStatus = 'active';\r\n    }\r\n\r\n    getStatus(item) {\r\n        return this.todos[item].currStatus;\r\n    }\r\n\r\n    todoExists(todos, newItem) {\r\n        return todos.some(todo => {\r\n            return todo.item === newItem;\r\n        });\r\n    }\r\n}\n\n//# sourceURL=webpack://todo_app/./src/utils/Projects.js?");
+
+/***/ }),
+
+/***/ "./src/utils/appendTodo.js":
+/*!*********************************!*\
+  !*** ./src/utils/appendTodo.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst appendTodo = (todos, list) => {\r\n    todos.forEach(todo => {\r\n        let li = document.createElement('li');\r\n        li.innerText = todo.item;\r\n\r\n        list.appendChild(li);\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (appendTodo);\n\n//# sourceURL=webpack://todo_app/./src/utils/appendTodo.js?");
 
 /***/ }),
 
