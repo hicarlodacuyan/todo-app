@@ -16,7 +16,7 @@
   \****************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root {\\n  --primary: #2EC4B6;\\n  --dark: #011627;\\n  --light: #EEEEEE;\\n  --danger: #E71D36;\\n  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\\n}\\n\\n* {\\n  margin: 0;\\n  padding: 0;\\n  box-sizing: border-box;\\n  font-family: \\\"montserrat\\\", sans-serif;\\n}\\n\\n.app {\\n  display: flex;\\n  flex-direction: column;\\n}\\n\\ninput:not([type=radio]):not([type=checkbox]), button {\\n  appearance: none;\\n  border: none;\\n  outline: none;\\n  background: none;\\n  cursor: initial;\\n}\\n\\nbody {\\n  background: var(--light);\\n  color: var(--dark);\\n}\\n\\nsection {\\n  margin-top: 2rem;\\n  margin-bottom: 2rem;\\n  padding-left: 1.5rem;\\n  padding-right: 1.5rem;\\n}\\n\\nh3 {\\n  color: var(--dark);\\n  font-size: 1rem;\\n  font-weight: 400;\\n}\\n\\nh4 {\\n  color: var(--dark);\\n  font-size: 0.875rem;\\n  font-weight: 700;\\n  margin-bottom: 0.5rem;\\n}\\n\\n.create-todo {\\n  display: flex;\\n  flex-direction: column;\\n}\\n.create-todo input[type=text] {\\n  display: block;\\n  width: 100%;\\n  font-size: 1.125rem;\\n  padding: 1rem 1.5rem;\\n  color: var(--dark);\\n  background-color: #fff;\\n  border-radius: 0.5rem;\\n  box-shadow: var(--shadow);\\n  margin-bottom: 0.75rem;\\n}\\n.create-todo input[type=submit] {\\n  display: block;\\n  width: 100%;\\n  font-size: 1.125rem;\\n  padding: 1rem 1.5rem;\\n  color: #fff;\\n  background-color: var(--primary);\\n  border-radius: 0.5rem;\\n  box-shadow: var(--shadow);\\n  cursor: pointer;\\n  transition: 0.2 ease-in-out;\\n}\\n.create-todo input[type=submit]:hover {\\n  opacity: 0.75;\\n}\\n\\n.todo-list {\\n  display: flex;\\n  flex-direction: column;\\n}\\n.todo-list .list-heading {\\n  display: flex;\\n  align-items: center;\\n  gap: 1rem;\\n  font-size: 0.9rem;\\n}\\n.todo-list .list-heading h3 {\\n  flex: 1;\\n}\\n.todo-list .list-heading button {\\n  cursor: pointer;\\n}\\n.todo-list .done .todo-content input {\\n  text-decoration: line-through;\\n  color: gray !important;\\n}\\n.todo-list .list {\\n  margin: 1rem 0;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  border-radius: 0.5rem;\\n  overflow: hidden;\\n  box-shadow: var(--shadow);\\n}\\n.todo-list .list .todo-item {\\n  display: flex;\\n  align-items: center;\\n  gap: 1rem;\\n  background-color: #fff;\\n  padding: 1rem;\\n  border-bottom: 1px solid #d3d3d3;\\n  box-shadow: var(--shadow);\\n}\\n.todo-list .list .todo-item label {\\n  cursor: pointer;\\n}\\n.todo-list .list .todo-item .todo-content {\\n  flex: 1;\\n}\\n.todo-list .list .todo-item .todo-content input {\\n  color: var(--dark);\\n  font-size: 1.125rem;\\n  width: 100%;\\n}\\n.todo-list .list .todo-item .actions {\\n  display: flex;\\n  align-items: center;\\n  gap: 0.5rem;\\n}\\n.todo-list .list .todo-item .actions button {\\n  padding: 0.5rem;\\n  border-radius: 0.25rem;\\n  color: #fff;\\n  cursor: pointer;\\n  transition: 0.2s ease-in-out;\\n}\\n.todo-list .list .todo-item .actions button:hover {\\n  opacity: 0.75;\\n}\\n.todo-list .list .todo-item .actions .edit {\\n  background-color: var(--primary);\\n}\\n.todo-list .list .todo-item .actions .delete {\\n  background-color: var(--danger);\\n}\\n.todo-list input[type=radio],\\n.todo-list input[type=checkbox] {\\n  display: none;\\n}\\n.todo-list .bubble {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 20px;\\n  height: 20px;\\n  border-radius: 50%;\\n  border: 2px solid var(--dark);\\n}\\n.todo-list .bubble::after {\\n  content: \\\"\\\";\\n  opacity: 0;\\n  width: 0;\\n  height: 0;\\n  background-color: var(--primary);\\n  border-radius: 50%;\\n  transition: 0.2 ease-in-out;\\n}\\n.todo-list input:checked ~ .bubble::after {\\n  width: 10px;\\n  height: 10px;\\n  opacity: 1;\\n}\\n\\n@media (min-width: 1200px) {\\n  body {\\n    display: flex;\\n    justify-content: center;\\n  }\\n  body #root {\\n    display: flex;\\n    justify-content: center;\\n    width: 100vw;\\n  }\\n  body #root .app {\\n    width: 40%;\\n  }\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo_app/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../src/images/bg-desktop-light.jpg */ \"./src/images/bg-desktop-light.jpg\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root {\\n  --primary: #2EC4B6;\\n  --dark: #011627;\\n  --light: #EEEEEE;\\n  --danger: #E71D36;\\n  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\\n}\\n\\n* {\\n  margin: 0;\\n  padding: 0;\\n  box-sizing: border-box;\\n  font-family: \\\"montserrat\\\", sans-serif;\\n}\\n\\n.app {\\n  display: flex;\\n  flex-direction: column;\\n}\\n.app .hero {\\n  background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\n  background-position: center center;\\n  background-size: cover;\\n  background-repeat: no-repeat;\\n}\\n\\ninput:not([type=radio]):not([type=checkbox]), button {\\n  appearance: none;\\n  border: none;\\n  outline: none;\\n  background: none;\\n  cursor: initial;\\n}\\n\\nbody {\\n  background: var(--light);\\n  color: var(--dark);\\n}\\n\\nsection {\\n  margin-top: 2rem;\\n  margin-bottom: 2rem;\\n  padding-left: 1.5rem;\\n  padding-right: 1.5rem;\\n}\\n\\nh2 {\\n  color: var(--light);\\n}\\n\\nh3 {\\n  color: var(--light);\\n  font-size: 1rem;\\n  font-weight: 400;\\n}\\n\\nh4 {\\n  color: var(--light);\\n  font-size: 0.875rem;\\n  font-weight: 700;\\n  margin-bottom: 0.5rem;\\n}\\n\\n.create-todo {\\n  display: flex;\\n  flex-direction: column;\\n}\\n.create-todo input[type=text] {\\n  display: block;\\n  width: 100%;\\n  font-size: 1.125rem;\\n  padding: 1rem 1.5rem;\\n  color: var(--dark);\\n  background-color: #fff;\\n  border-radius: 0.5rem;\\n  box-shadow: var(--shadow);\\n  margin-bottom: 0.75rem;\\n}\\n.create-todo input[type=submit] {\\n  display: block;\\n  width: 100%;\\n  font-size: 1.125rem;\\n  padding: 1rem 1.5rem;\\n  color: #fff;\\n  background-color: var(--primary);\\n  border-radius: 0.5rem;\\n  box-shadow: var(--shadow);\\n  cursor: pointer;\\n  transition: 0.2 ease-in-out;\\n}\\n.create-todo input[type=submit]:hover {\\n  opacity: 0.75;\\n}\\n\\n.todo-list {\\n  display: flex;\\n  flex-direction: column;\\n}\\n.todo-list .list-heading {\\n  display: flex;\\n  align-items: center;\\n  gap: 1rem;\\n  font-size: 0.9rem;\\n}\\n.todo-list .list-heading h3 {\\n  color: var(--dark);\\n  font-size: 1rem;\\n  font-weight: 400;\\n  flex: 1;\\n}\\n.todo-list .list-heading button {\\n  cursor: pointer;\\n}\\n.todo-list .done .todo-content input {\\n  text-decoration: line-through;\\n  color: gray !important;\\n}\\n.todo-list .list {\\n  margin: 1rem 0;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  border-radius: 0.5rem;\\n  overflow: hidden;\\n  box-shadow: var(--shadow);\\n}\\n.todo-list .list .todo-item {\\n  display: flex;\\n  align-items: center;\\n  gap: 1rem;\\n  background-color: #fff;\\n  padding: 1rem;\\n  border-bottom: 1px solid #d3d3d3;\\n  box-shadow: var(--shadow);\\n}\\n.todo-list .list .todo-item label {\\n  cursor: pointer;\\n}\\n.todo-list .list .todo-item .todo-content {\\n  flex: 1;\\n}\\n.todo-list .list .todo-item .todo-content input {\\n  color: var(--dark);\\n  font-size: 1.125rem;\\n  width: 100%;\\n}\\n.todo-list .list .todo-item .actions {\\n  display: flex;\\n  align-items: center;\\n  gap: 0.5rem;\\n}\\n.todo-list .list .todo-item .actions button {\\n  padding: 0.5rem;\\n  border-radius: 0.25rem;\\n  color: #fff;\\n  cursor: pointer;\\n  transition: 0.2s ease-in-out;\\n}\\n.todo-list .list .todo-item .actions button:hover {\\n  opacity: 0.75;\\n}\\n.todo-list .list .todo-item .actions .edit {\\n  background-color: var(--primary);\\n}\\n.todo-list .list .todo-item .actions .delete {\\n  background-color: var(--danger);\\n}\\n.todo-list input[type=radio],\\n.todo-list input[type=checkbox] {\\n  display: none;\\n}\\n.todo-list .bubble {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 20px;\\n  height: 20px;\\n  border-radius: 50%;\\n  border: 2px solid var(--dark);\\n}\\n.todo-list .bubble::after {\\n  content: \\\"\\\";\\n  opacity: 0;\\n  width: 0;\\n  height: 0;\\n  background-color: var(--primary);\\n  border-radius: 50%;\\n  transition: 0.2 ease-in-out;\\n}\\n.todo-list input:checked ~ .bubble::after {\\n  width: 10px;\\n  height: 10px;\\n  opacity: 1;\\n}\\n\\n@media (min-width: 1200px) {\\n  body {\\n    display: flex;\\n    justify-content: center;\\n    width: 100vw;\\n  }\\n  body .app {\\n    width: 100%;\\n    display: flex;\\n    align-items: center;\\n  }\\n  body .app .hero {\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    width: 100%;\\n  }\\n  body .app .hero .greeting, body .app .hero .create-todo {\\n    width: 50%;\\n  }\\n  body .app .todo-list {\\n    width: 50%;\\n  }\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo_app/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n\n      content += cssWithMappingToString(item);\n\n      if (needLayer) {\n        content += \"}\";\n      }\n\n      if (item[2]) {\n        content += \"}\";\n      }\n\n      if (item[4]) {\n        content += \"}\";\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n\n\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://todo_app/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  }\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://todo_app/./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -146,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _lib_App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/App */ \"./src/lib/App.js\");\n/* harmony import */ var _components_todoList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/todoList */ \"./src/components/todoList.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    const rootElement = document.getElementById('root');\r\n    rootElement.appendChild((0,_lib_App__WEBPACK_IMPORTED_MODULE_1__[\"default\"])());\r\n    _components_todoList__WEBPACK_IMPORTED_MODULE_2__.todoList.saveAndRender();\r\n});\n\n//# sourceURL=webpack://todo_app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _lib_App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/App */ \"./src/lib/App.js\");\n/* harmony import */ var _components_todoList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/todoList */ \"./src/components/todoList.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    const rootElement = document.querySelector('body');\r\n    rootElement.appendChild((0,_lib_App__WEBPACK_IMPORTED_MODULE_1__[\"default\"])());\r\n    _components_todoList__WEBPACK_IMPORTED_MODULE_2__.todoList.saveAndRender();\r\n});\n\n//# sourceURL=webpack://todo_app/./src/index.js?");
 
 /***/ }),
 
@@ -156,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/header */ \"./src/components/header.js\");\n/* harmony import */ var _components_todoForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/todoForm */ \"./src/components/todoForm.js\");\n/* harmony import */ var _components_todoList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/todoList */ \"./src/components/todoList.js\");\n\r\n\r\n\r\n\r\nconst App = () => {\r\n    const app = document.createElement('div');\r\n    app.classList.add('app');\r\n\r\n    app.appendChild(_components_header__WEBPACK_IMPORTED_MODULE_0__.header.init());\r\n    app.appendChild(_components_todoForm__WEBPACK_IMPORTED_MODULE_1__.todoForm.init());\r\n    app.appendChild(_components_todoList__WEBPACK_IMPORTED_MODULE_2__.todoList.init());\r\n\r\n    return app;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://todo_app/./src/lib/App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/header */ \"./src/components/header.js\");\n/* harmony import */ var _components_todoForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/todoForm */ \"./src/components/todoForm.js\");\n/* harmony import */ var _components_todoList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/todoList */ \"./src/components/todoList.js\");\n\r\n\r\n\r\n\r\nconst App = () => {\r\n    const app = document.createElement('div');\r\n    app.classList.add('app');\r\n\r\n    const hero = document.createElement('div');\r\n    hero.classList.add('hero');\r\n\r\n    hero.appendChild(_components_header__WEBPACK_IMPORTED_MODULE_0__.header.init());\r\n    hero.appendChild(_components_todoForm__WEBPACK_IMPORTED_MODULE_1__.todoForm.init());\r\n\r\n    app.appendChild(hero);\r\n    app.appendChild(_components_todoList__WEBPACK_IMPORTED_MODULE_2__.todoList.init());\r\n\r\n    return app;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://todo_app/./src/lib/App.js?");
 
 /***/ }),
 
@@ -218,6 +228,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"handleItemDeleted\": () => (/* binding */ handleItemDeleted)\n/* harmony export */ });\n/* harmony import */ var _Observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Observable */ \"./src/lib/Observable.js\");\n\r\n\r\nconst handleItemDeleted = index => {\r\n    _Observable__WEBPACK_IMPORTED_MODULE_0__[\"default\"].notify('itemDeleted', index);\r\n};\n\n//# sourceURL=webpack://todo_app/./src/lib/handleItemDeleted.js?");
 
+/***/ }),
+
+/***/ "./src/images/bg-desktop-light.jpg":
+/*!*****************************************!*\
+  !*** ./src/images/bg-desktop-light.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"3508d620efd5a52bb4ce.jpg\";\n\n//# sourceURL=webpack://todo_app/./src/images/bg-desktop-light.jpg?");
+
 /***/ })
 
 /******/ 	});
@@ -246,6 +266,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -271,6 +294,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -285,6 +320,52 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
